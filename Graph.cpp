@@ -11,7 +11,7 @@ namespace VertexCover {
  *
  * @throws ( std :: runtime_error ) If the file cannot be opened for some reason
  */
-Graph VertexCover::readFromFile(const std::string& filename) {
+Graph readFromFile(const std::string& filename) {
     // Opens the file 
     std::ifstream in(filename);
 
@@ -67,7 +67,7 @@ Graph VertexCover::readFromFile(const std::string& filename) {
  * @return (std::unordered_set<Vertex>) The set of vertices 
  * that forms a vertex cover of the graph.
  */
-std::unordered_set<Vertex> VertexCover::cover_graph(Graph g) {
+std::unordered_set<Vertex> cover_graph(Graph g) {
     std::unordered_set<Vertex> cover;
 
     while (true) {
