@@ -4,6 +4,7 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
+#include <fstream>
 
 #include <algorithm>
 #include <stdexcept>
@@ -14,6 +15,18 @@ using Graph = std::unordered_map<Vertex, Neighbors>;
 
 
 namespace VertexCover {
+/**
+ * @brief Reads the contents of a flight table
+ * as specified by the filename , into an undirected
+ * Graph .
+ *
+ * @param filename ( a const . string reference ) The filename of the file to be read
+ * @return ( Graph ) The resultant Graph object described by the file 's contents .
+ *
+ * @throws ( std :: runtime_error ) If the file cannot be opened for some reason
+ */
+Graph readFromFile(const std::string& filename);
+
 /**
  * @brief Generates a sub-optimal minimumum vertex cover
  * by repeatedly choosing the largest degree vertex & 
